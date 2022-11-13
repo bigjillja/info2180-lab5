@@ -13,7 +13,7 @@ echo $_GET['country'];
 
 $message="";
 
-$query= filter_input(INPUT_GET, "query", FILTER_SANITIZE_STRING);
+$query= SELECT * FROM countries WHERE name LIKE '%$country%';
 
 if ($row['name'] === $query){
   $message = "<p>".$row["name"]."</p>";
