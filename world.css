@@ -46,4 +46,16 @@ input{
      padding-right: 10px;
      margin: 5px;
  }
+
+ #cities{
+    background-color: rgb(48, 212, 138);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+}
+
+
 /* Add your own styles */
