@@ -1,14 +1,14 @@
 window.onload = function(){
-    var lookupBtn = document.querySelector("#lookup");
-    var results = document.querySelector("#results");
-    var query = document.querySelector("input");
+    var lookupBtn = document.getElementById("lookup");
+    var results = document.getElementById("result");
+    var country = document.getElementById("country");
     var request = new XMLHttpRequest();
 
     lookupBtn.addEventListener('click', element);
 
     function element(e){
         e.preventDefault();
-        var url = "world.php?query=" + query.value;
+        var url = "world.php?country=" + country.value;
         request.onreadystatechange = fetch;
         request.open('GET', url, true);
         request.send();

@@ -4,22 +4,10 @@ $username = 'lab5_user';
 $password = 'password123';
 $dbname = 'world';
 
+$country = $_GET['country'];
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT * FROM countries");
-
+$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%';");
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-echo $_GET['country'];
-
-$message="";
-
-$query= SELECT * FROM countries WHERE name LIKE '%$country%';
-
-if ($row['name'] === $query){
-  $message = "<p>".$row["name"]."</p>";
-
-  echo $message;
-}
 
 ?>
 <ul>
